@@ -1,4 +1,4 @@
-/* ===== Variáveis CSS (requisito 8) ===== */
+/* ===== variaveis css pra reaproveitar cores e espaçamentos ===== */
 :root {
     --cor-fundo: #d4d0c8;
     --cor-fundo-card: #f5f3ef;
@@ -20,7 +20,7 @@
     --raio-borda: 10px;
 }
 
-/* ===== Dark Mode (requisito 10) ===== */
+/* ===== cores do modo escuro, sobrescreve as variáveis quando ativa ===== */
 .dark-mode {
     --cor-fundo: #121212;
     --cor-fundo-card: #1e1e1e;
@@ -30,7 +30,7 @@
     --cor-sombra: rgba(0, 0, 0, 0.5);
 }
 
-/* ===== Reset ===== */
+/* ===== reset pra tirar margens e paddings padrão do navegador ===== */
 * {
     margin: 0;
     padding: 0;
@@ -65,11 +65,11 @@ a:hover {
     color: var(--cor-dourado);
 }
 
-/* ===== Header Estilizado com Bandeira ===== */
+/* ===== header com a imagem de fundo da bandeira do timão ===== */
 header {
     text-align: center;
     background-color: var(--cor-header);
-    /* Fundo com imagem da bandeira e overlay escuro para leitura */
+    /* coloquei um degradê escuro por cima da imagem pra dar pra ler o texto */
     background-image: linear-gradient(to bottom, rgba(10, 10, 10, 0.85), rgba(20, 20, 20, 0.95)), url('img/header-bg.png');
     background-size: cover;
     background-position: center;
@@ -98,12 +98,12 @@ header h1 span {
     color: var(--cor-dourado);
 }
 
-header > p {
+header>p {
     font-size: 1.1rem;
     color: #e0e0e0;
     margin-bottom: 20px;
     font-style: italic;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 nav ul {
@@ -120,13 +120,13 @@ nav a {
     transition: color 0.2s, border-bottom 0.2s;
 }
 
-/* Destaque no item ativo do menu (requisito 7c) */
+/* deixa o link da página atual com destaque dourado */
 nav a.link-ativo {
     color: var(--cor-dourado);
     border-bottom: 2px solid var(--cor-dourado);
 }
 
-/* Wrapper da navegação para ficar fixo no topo ao rolar */
+/* essa div faz a barra de navegação grudar no topo quando rola a página */
 .nav-wrapper {
     background-image: linear-gradient(to bottom, #1a1a1a, #111111);
     box-shadow: 0 5px 15px var(--cor-sombra);
@@ -140,7 +140,7 @@ nav a:hover {
     color: var(--cor-dourado);
 }
 
-/* ===== Menu Sanduíche (requisito 3) ===== */
+/* ===== menu hamburguer, escondido no desktop e aparece no celular ===== */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -167,14 +167,16 @@ nav a:hover {
 .hamburger-ativo .hamburger-linha:nth-child(1) {
     transform: translateY(9.5px) rotate(45deg);
 }
+
 .hamburger-ativo .hamburger-linha:nth-child(2) {
     opacity: 0;
 }
+
 .hamburger-ativo .hamburger-linha:nth-child(3) {
     transform: translateY(-9.5px) rotate(-45deg);
 }
 
-/* ===== CSS Grid Layout (requisito 9) ===== */
+/* ===== layout em grid: posts na esquerda e aside na direita ===== */
 .grid-layout {
     display: grid;
     grid-template-columns: 1fr 300px;
@@ -184,7 +186,7 @@ nav a:hover {
     padding: 0 var(--espacamento-md);
 }
 
-/* ===== Main / Articles ===== */
+/* ===== estilo dos posts / cards ===== */
 h2 {
     border-bottom: 1px dotted var(--cor-borda);
     border-left: 10px solid var(--cor-dourado);
@@ -192,7 +194,7 @@ h2 {
     margin-bottom: var(--espacamento-sm);
 }
 
-/* Cards com efeito hover (requisito 7b) */
+/* quando passa o mouse no card ele sobe um pouco, achei legal esse efeito */
 .card {
     background-color: var(--cor-fundo-card);
     border: 1px dotted var(--cor-borda);
@@ -230,7 +232,7 @@ h2 {
     font-size: 0.8rem;
 }
 
-/* ===== Aside (requisito 2) ===== */
+/* ===== barra lateral (aside) ===== */
 aside {
     align-self: start;
 }
@@ -282,7 +284,7 @@ aside {
     color: #e0e0e0;
 }
 
-/* Últimos Resultados */
+/* resultados dos jogos com as bolinhas coloridas de V/E/D */
 .resultados {
     display: flex;
     flex-direction: column;
@@ -341,7 +343,7 @@ aside {
     margin: 2px 0 0 0;
 }
 
-/* ===== Footer (requisito 6) ===== */
+/* ===== rodapé ===== */
 footer {
     background-color: var(--cor-footer);
     background-image: linear-gradient(to bottom, #1a1a1a, #111111);
@@ -421,7 +423,53 @@ footer {
     color: #1a1a1a;
 }
 
-/* ===== Botão Dark Mode ===== */
+/* ===== estilo do dialog (modal nativo do HTML) ===== */
+.dialog-sobre {
+    border: none;
+    border-radius: var(--raio-borda);
+    padding: var(--espacamento-lg);
+    max-width: 500px;
+    background-color: var(--cor-fundo-card);
+    color: var(--cor-texto);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* o ::backdrop é o fundo escuro que aparece atrás do modal */
+.dialog-sobre::backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.dialog-sobre h2 {
+    color: var(--cor-dourado);
+    border-left: 5px solid var(--cor-dourado);
+    padding-left: 10px;
+    margin-bottom: var(--espacamento-md);
+}
+
+.dialog-sobre p {
+    margin-bottom: var(--espacamento-sm);
+}
+
+.dialog-sobre ul {
+    margin: var(--espacamento-sm) 0 var(--espacamento-md) var(--espacamento-md);
+}
+
+.dialog-sobre button {
+    background-color: var(--cor-dourado);
+    color: #1a1a1a;
+    border: none;
+    padding: 8px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.dialog-sobre button:hover {
+    background-color: var(--cor-dourado-claro);
+}
+
+/* ===== botão do dark mode que fica flutuando no canto inferior direito ===== */
 .dark-mode-btn {
     position: fixed;
     bottom: 20px;
@@ -442,23 +490,23 @@ footer {
     transform: scale(1.1);
 }
 
-/* ===== Responsividade ===== */
+/* ===== media queries pra deixar o site responsivo ===== */
 
-/* Tablets */
+/* em telas médias o aside vai pra baixo dos posts */
 @media (max-width: 900px) {
     .grid-layout {
         grid-template-columns: 1fr;
     }
 }
 
-/* Celular (requisito 3 - menu sanduíche) */
+/* no celular muda bastante coisa: menu vira hamburguer, fonte diminui, etc */
 @media (max-width: 700px) {
     header h1 {
         font-size: 2rem;
         letter-spacing: 0.2rem;
     }
 
-    header > p {
+    header>p {
         font-size: 0.85rem;
     }
 

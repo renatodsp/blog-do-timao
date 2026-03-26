@@ -11,17 +11,17 @@
 <body id="topo">
     <div id="conteiner">
         <header>
-            <h1>⚽ Blog do <span>Timão</span></h1>
+            <h1>Blog do <span>Timão</span></h1>
             <p>"Aqui tem um bando de louco, louco por ti Corinthians"</p>
 
-            <!-- Botão menu sanduíche (aparece só em telas pequenas) -->
+            <!-- botão do menu hamburguer, só aparece no celular -->
             <button class="hamburger" id="hamburger" aria-label="Abrir menu">
                 <span class="hamburger-linha"></span>
                 <span class="hamburger-linha"></span>
                 <span class="hamburger-linha"></span>
             </button>
 
-            <!-- Envolver o nav em uma div para ele ficar sticky -->
+            <!-- coloquei o nav dentro dessa div pra ele ficar fixo no topo quando rola a página -->
             <div class="nav-wrapper">
                 <nav id="nav">
                     <ul>
@@ -29,60 +29,76 @@
                         <li><a href="#ultima">Primeira postagem</a></li>
                         <li><a href="#primeira">Última postagem</a></li>
                         <li><a href="#rodape">Contato</a></li>
+                        <li><a href="#" id="btnSobre">Sobre</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
 
-        <!-- Layout com CSS Grid (requisito 9) -->
+        <!-- aqui começa o layout principal, usei CSS Grid pra dividir entre os posts e o aside -->
         <div class="grid-layout">
             <main>
-                <!-- Post 1: Jogo Flamengo -->
+                <!-- post sobre o jogo contra o flamengo -->
                 <article id="ultima" class="card">
                     <picture>
-                        <source media="(max-width: 600px)" srcset="img/stadium.png" sizes="100vw">
-                        <img src="img/stadium.png" alt="Neo Química Arena lotada" class="card-imagem">
+                        <source media="(max-width: 600px)" srcset="img/cxf.webp" sizes="100vw">
+                        <img src="img/cxf.webp" alt="Neo Química Arena lotada" class="card-imagem">
                     </picture>
                     <h2>Corinthians empata com o Flamengo na Arena</h2>
-                    <p>Em clássico disputado na Neo Química Arena, o Corinthians empatou em 1 a 1 com o Flamengo pelo Campeonato Brasileiro. O Timão jogou com um jogador a mais durante boa parte do segundo tempo após expulsão na equipe carioca, criou várias chances, mas não conseguiu converter a pressão no gol da vitória.</p>
+                    <p>Em clássico disputado na Neo Química Arena, o Corinthians empatou em 1 a 1 com o Flamengo pelo
+                        Campeonato Brasileiro. O Timão jogou com um jogador a mais durante boa parte do segundo tempo
+                        após expulsão na equipe carioca, criou várias chances, mas não conseguiu converter a pressão no
+                        gol da vitória.</p>
                     <p class="autor">
                         Redação
                         <span class="data-hora">22/03/2026 - 21:30</span>
                     </p>
                 </article>
 
-                <!-- Post 2: Jogo Chapecoense -->
+                <!-- post sobre o jogo contra a chapecoense -->
                 <article class="card">
                     <picture>
-                        <source media="(max-width: 600px)" srcset="img/player.png" sizes="100vw">
-                        <img src="img/player.png" alt="Jogador do Corinthians em ação" class="card-imagem">
+                        <source media="(max-width: 600px)" srcset="img/cxc.webp" sizes="100vw">
+                        <img src="img/cxc.webp" alt="Jogador do Corinthians em ação" class="card-imagem">
                     </picture>
                     <h2>Empate sem gols fora de casa contra a Chapecoense</h2>
-                    <p>O Corinthians viajou até Santa Catarina e ficou no 0 a 0 com a Chapecoense na Arena Condá. Em um jogo truncado e de poucas oportunidades claras para ambos os lados, a equipe alvinegra somou apenas um ponto fora de casa pelo Brasileirão.</p>
+                    <p>O Corinthians viajou até Santa Catarina e ficou no 0 a 0 com a Chapecoense na Arena Condá. Em um
+                        jogo truncado e de poucas oportunidades claras para ambos os lados, a equipe alvinegra somou
+                        apenas um ponto fora de casa pelo Brasileirão.</p>
                     <p class="autor">
                         Redação
                         <span class="data-hora">19/03/2026 - 19:00</span>
                     </p>
                 </article>
 
-                <!-- Post 3: Reforços -->
+                <!-- post sobre os reforços que chegaram -->
                 <article class="card">
                     <picture>
                         <source media="(max-width: 600px)" srcset="img/fans.png" sizes="100vw">
                         <img src="img/fans.png" alt="Torcida do Corinthians fazendo festa" class="card-imagem">
                     </picture>
                     <h2>Pacotão de Reforços: Gabriel Paulista, Matheus Pereira e Milans</h2>
-                    <p>Com o fim do transfer ban, o Corinthians se movimentou pesado no mercado. Entre os principais reforços confirmados estão o experiente zagueiro Gabriel Paulista, vindo da Europa, o lateral uruguaio Pedro Milans, e o meia Matheus Pereira. A Fiel vive a expectativa da estreia dos novos contratados.</p>
+                    <p>Com o fim do transfer ban, o Corinthians se movimentou pesado no mercado. Entre os principais
+                        reforços confirmados estão o experiente zagueiro Gabriel Paulista, vindo da Europa, o lateral
+                        uruguaio Pedro Milans, e o meia Matheus Pereira. A Fiel vive a expectativa da estreia dos novos
+                        contratados.</p>
                     <p class="autor">
                         Mercado da Bola
                         <span class="data-hora">15/03/2026 - 14:00</span>
                     </p>
                 </article>
 
-                <!-- Post 4: Arthur Cabral -->
+                <!-- post sobre o interesse no arthur cabral -->
                 <article id="primeira" class="card">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="img/cabral.jpg" sizes="100vw">
+                        <img src="img/cabral.jpg" alt="Arthur Cabral" class="card-imagem">
+                    </picture>
                     <h2>Corinthians tenta a contratação de Arthur Cabral</h2>
-                    <p>O executivo de futebol Marcelo Paz confirmou o interesse no atacante Arthur Cabral, atualmente no Botafogo. A ideia da diretoria corintiana é um empréstimo até abril de 2027 com opção de compra. Apesar do interesse, os altos valores envolvidos ainda são o principal obstáculo para a concretização do negócio.</p>
+                    <p>O executivo de futebol Marcelo Paz confirmou o interesse no atacante Arthur Cabral, atualmente no
+                        Botafogo. A ideia da diretoria corintiana é um empréstimo até abril de 2027 com opção de compra.
+                        Apesar do interesse, os altos valores envolvidos ainda são o principal obstáculo para a
+                        concretização do negócio.</p>
                     <p class="autor">
                         Mercado da Bola
                         <span class="data-hora">10/03/2026 - 10:30</span>
@@ -90,12 +106,13 @@
                 </article>
             </main>
 
-            <!-- Aside com links (já existia no modelo) -->
+            <!-- barra lateral com informações extras -->
             <aside>
                 <div class="aside-secao">
                     <h3>Links Úteis</h3>
                     <ul class="aside-links">
-                        <li><a href="https://www.corinthians.com.br" target="_blank">Site Oficial do Corinthians</a></li>
+                        <li><a href="https://www.corinthians.com.br" target="_blank">Site Oficial do Corinthians</a>
+                        </li>
                         <li><a href="#">Futebol Profissional</a></li>
                         <li><a href="#">Sócio Fiel</a></li>
                         <li><a href="#">Ingressos</a></li>
@@ -103,7 +120,7 @@
                     </ul>
                 </div>
 
-                <!-- Aside 2 - conteúdo extra (requisito 2) -->
+                <!-- lista dos títulos do corinthians -->
                 <div class="aside-secao">
                     <h3>Títulos Conquistados</h3>
                     <ul class="aside-titulos">
@@ -115,7 +132,7 @@
                     </ul>
                 </div>
 
-                <!-- Aside 3 - Últimos resultados -->
+                <!-- placar dos últimos jogos, usei badges coloridos pra indicar V/E/D -->
                 <div class="aside-secao">
                     <h3>Últimos Resultados</h3>
                     <div class="resultados">
@@ -159,13 +176,13 @@
             </aside>
         </div>
 
-        <!-- Footer melhorado (requisito 6) -->
+        <!-- rodapé do site com contato e redes sociais -->
         <footer id="rodape">
             <div class="footer-conteudo">
                 <div class="footer-secao">
                     <h4>Blog do Timão</h4>
                     <p>Blog dedicado ao Corinthians. Notícias, história e opinião.</p>
-                    <p>📍 São Paulo, SP - Brasil</p>
+                    <p>📍 Teresina, PI - Brasil</p>
                     <p>✉️ <a href="mailto:contato@blogdotimao.com.br">contato@blogdotimao.com.br</a></p>
                 </div>
                 <div class="footer-secao">
@@ -185,29 +202,43 @@
         </footer>
     </div>
 
-    <!-- Botão Dark Mode (requisito 10 - algo inovador) -->
+    <!-- usei a tag <dialog> que é mais recente no HTML, cria um modal nativo sem precisar de biblioteca -->
+    <dialog id="dialogSobre" class="dialog-sobre">
+        <h2>Sobre o Blog do Timão</h2>
+        <p>Este blog foi criado como atividade avaliativa da disciplina de Programação Web Front-End do IFPI.</p>
+        <p>O objetivo é apresentar notícias e informações sobre o Sport Club Corinthians Paulista, utilizando HTML semântico, CSS moderno e JavaScript.</p>
+        <p><strong>Tecnologias utilizadas:</strong></p>
+        <ul>
+            <li>HTML5 (semântico + tag dialog)</li>
+            <li>CSS3 (variáveis, grid, flexbox, media queries)</li>
+            <li>JavaScript (dark mode, menu hambúrguer)</li>
+        </ul>
+        <button id="fecharDialog">Fechar</button>
+    </dialog>
+
+    <!-- botão do dark mode - essa parte foi feita com ajuda de IA -->
     <button class="dark-mode-btn" id="darkModeBtn">🌙</button>
 
     <script>
-        // Menu sanduíche (requisito 3)
+        // aqui faz o menu hamburguer abrir e fechar quando clica no botão
         var hamburger = document.getElementById('hamburger');
         var nav = document.getElementById('nav');
 
-        hamburger.addEventListener('click', function() {
+        hamburger.addEventListener('click', function () {
             nav.classList.toggle('nav-aberto');
             hamburger.classList.toggle('hamburger-ativo');
         });
 
-        // Fechar menu ao clicar em link
+        // fecha o menu quando clica em algum link (senão ele ficava aberto)
         var links = document.querySelectorAll('nav a');
         for (var i = 0; i < links.length; i++) {
-            links[i].addEventListener('click', function() {
+            links[i].addEventListener('click', function () {
                 nav.classList.remove('nav-aberto');
                 hamburger.classList.remove('hamburger-ativo');
             });
         }
 
-        // Dark Mode (requisito 10)
+        // lógica do dark mode, salva a preferência no localStorage pra lembrar quando voltar
         var darkBtn = document.getElementById('darkModeBtn');
 
         if (localStorage.getItem('darkMode') === 'true') {
@@ -215,11 +246,25 @@
             darkBtn.textContent = '☀️';
         }
 
-        darkBtn.addEventListener('click', function() {
+        darkBtn.addEventListener('click', function () {
             document.body.classList.toggle('dark-mode');
             var isDark = document.body.classList.contains('dark-mode');
             darkBtn.textContent = isDark ? '☀️' : '🌙';
             localStorage.setItem('darkMode', isDark);
+        });
+
+        // abre o dialog "Sobre" quando clica no link, o showModal() é o método nativo do <dialog>
+        var btnSobre = document.getElementById('btnSobre');
+        var dialogSobre = document.getElementById('dialogSobre');
+        var fecharDialog = document.getElementById('fecharDialog');
+
+        btnSobre.addEventListener('click', function (e) {
+            e.preventDefault();
+            dialogSobre.showModal();
+        });
+
+        fecharDialog.addEventListener('click', function () {
+            dialogSobre.close();
         });
     </script>
 </body>
