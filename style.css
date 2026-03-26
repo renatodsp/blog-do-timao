@@ -69,14 +69,15 @@ a:hover {
 header {
     text-align: center;
     background-color: var(--cor-header);
-    /* coloquei um degradê escuro por cima da imagem pra dar pra ler o texto */
-    background-image: linear-gradient(to bottom, rgba(10, 10, 10, 0.85), rgba(20, 20, 20, 0.95)), url('img/header-bg.png');
+    /* degradê escuro por cima pra dar pra ler o texto */
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.85)), url('img/banner-corinthians.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
     color: var(--cor-link);
     box-shadow: 0 5px 25px var(--cor-sombra);
-    padding-top: 30px;
+    padding-top: 100px;
     padding-bottom: 0;
     position: relative;
     z-index: 100;
@@ -101,7 +102,7 @@ header h1 span {
 header>p {
     font-size: 1.1rem;
     color: #e0e0e0;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
     font-style: italic;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
